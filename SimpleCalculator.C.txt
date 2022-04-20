@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <math.h>
+
+// CALCULATOR FOR SIMPLE ADDITION, SUBTRACTION, DIVISION AND MULTIPLICATION.
+
+int main(){
+
+    double num1,num2;
+    int input;
+    printf("Enter the value of integer 1 and integer 2\n");
+    scanf("%lf\n%lf",&num1,&num2);
+
+    printf("Press 1: ADDITION\nPress 2: SUBTRACTION\nPress 3: DIVISION\nPress 4: MULTIPLICATION\n");
+    scanf("%d",&input);
+
+    switch(input){
+        case 1: printf("Addition of %.2lf and %.2lf is %.2lf",num1,num2,num1+num2);
+        break;
+        case 2: if(num1>num2){
+            printf("Subtraction of %.2lf and %.2lf is %.2lf",num1,num2,num1-num2);
+        }else{
+            printf("Subtraction of %.2lf and %.2lf is %.2lf",num2,num1,num2-num1);
+        }
+        break;
+        case 3: if(num1>num2){
+            printf("Division of %.2lf from %.2lf is %.2lf",num1,num2,num1/num2);
+        }else{
+            printf("Division of %.2lf from %.2lf is %.2lf",num2,num1,num2/num1);
+        }
+        break;
+        case 4: printf("Multiplication of %.2lf and %.2lf is %.2lf",num1,num2,num1*num2);
+        break;
+
+        default: printf("Invalid Input!!!");
+    }
+
+    return 0;
+}
