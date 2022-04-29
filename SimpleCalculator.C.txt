@@ -1,0 +1,32 @@
+#include <stdio.h>
+// Simple Calculator
+int main(){
+    char opt;
+    double num1,num2;
+    
+    printf("Choose any operator (+,-,*,/)\n");
+    scanf("%c",&opt);
+   
+    printf("Please enter the value of first number\n");
+    scanf("%lf",&num1);
+    printf("Please enter the value of second number\n");
+    scanf("%lf",&num2);
+    
+    switch(opt){
+        case '+': 
+        printf("%.2lf + %.2lf = %.2lf\n",num1,num2,num1+num2);
+        break;
+        case '-': 
+        printf("%.2lf - %.2lf = %.2lf\n",num1,num2,num1-num2);
+        break;
+        case '*': 
+        printf("%.2lf * %.2lf = %.2lf\n",num1,num2,num1*num2);
+        break;
+        case '/': 
+        printf("%.2lf / %.2lf = %.2lf\n",num1,num2,num1/num2);
+        break;
+        default:
+        printf("INVALID OPERATOR!");
+        }
+    return 0;
+}
